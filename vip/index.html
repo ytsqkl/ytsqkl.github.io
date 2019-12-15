@@ -1,0 +1,534 @@
+﻿ 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>技术研究用，不得用于商业用途</title>
+    <link href="./favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.min.css" />
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="app.css" />
+   
+  
+  <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+
+<style>
+@charset "utf-8";
+/* Love TY Movies system
+   爱TY影视系统 aty.pw
+   by 、 TY
+   Write your styles 
+*/
+
+body {
+    background-color: #f4f4f4;
+    font-size: 14px;
+}
+
+.am-container {
+    max-width: 1200px;
+}
+
+/* 顶部导航栏背景色 */
+.am-topbar {
+    background: #fff;/
+/* 左上角站标颜色 }
+/* 左上角站标颜色 */
+.
+..
+}
+/* 左上角站标颜色 */
+.web-name {
+    color: #6D7C84!important;
+}
+
+/* 顶部观看记录 */
+@media only screen and (max-width: 640px) {
+    .am-dropdown {
+        display: block;
+    }
+}
+
+.am-slides {
+    background-color: #000;
+}
+
+/* 标题栏去缩进 */
+.am-titlebar-default {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 电影展示块 */
+.movie-description, .movie-title, .movie-tags, .right-list li a {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+.movie-item {
+    display: block;
+    width: 100%;
+    max-width: 178px;
+    height: 232px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+.movie-cover {
+    width: 100%;
+    height: 178px;
+    position: relative;
+    overflow: hidden;
+}
+.movie-cover>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 550px) {
+    .movie-item {
+        height: 212px;
+    }
+    .movie-cover {
+        height: 158px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .movie-item {
+        height: 192px;
+    }
+    .movie-cover {
+        height: 138px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .movie-item {
+        height: 172px;
+    }
+    .movie-cover {
+        height: 118px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .movie-item {
+        height: 152px;
+    }
+    .movie-cover {
+        height: 98px;
+    }
+    /*.am-avg-sm-3>li {*/
+    /*    width: 50%;*/
+    /*}*/
+    /*.am-avg-sm-3>li:nth-of-type(2n+1) {*/
+    /*    clear: both;*/
+    /*} */
+}
+.movie-description {
+    position: absolute;
+    width: 100%;
+    bottom: -51px;
+    height: 75px;
+}
+.movie-description>.description-bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.movie-description>p {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+}
+.movie-item:hover .movie-description {
+    bottom: 0;
+}
+.movie-title {
+    background-color: #fff;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+.movie-item:hover>.movie-title {
+    background-color: #f60;
+    color: #fff;
+}
+.movie-title>p {
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-align: center;
+}
+.movie-title>.movie-tags {
+    font-size: 12px;
+    color: #999;
+}
+.movie-item:hover>.movie-title>.movie-tags {
+    color: #fff;
+}
+
+/* 自动隐藏多出的两个 */
+@media only screen and (min-width: 1025px) {
+    .index-container .movie-lists li:nth-last-child(2), .index-container .movie-lists li:nth-last-child(1) {
+        display: none!important;
+    }
+    /*.tv-lists li:nth-child(16),.tv-lists li:nth-child(17),.tv-lists li:nth-child(18) {*/
+    /*    display: none!important;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1025px) {
+    .tv-lists li:nth-child(19),.tv-lists li:nth-child(20) {
+        display: none!important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /*.tv-lists li:nth-child(17),.tv-lists li:nth-child(18) {*/
+    /*    display: none!important;*/
+    /*}*/
+}
+
+.tv-lists .movie-item { 
+    height: auto;
+}
+
+.tv-lists .movie-cover {
+    height: auto;
+    max-height: 100px;
+}
+
+/* 右侧列表 */
+.right-list {
+    padding-left: 0;
+    margin-top: 10px;
+}
+.right-list li {
+    background-color: #fdfdfd;
+    padding: 0 10px;
+    list-style: none;
+}
+.right-list li a {
+    display: block;
+    line-height: 44px;
+    color: #555;
+}
+.right-list li a:hover {
+    color: #f60;
+}
+
+.right-list .r-l-right {
+    float: right;
+    font-size: 12px;
+    color: #999;
+    display: inline-block;
+    margin-left: 10px;
+}
+/* 右侧列表排行 */
+.right-list li:nth-child(1) .am-round {
+    background-color: #dd514c;
+}
+.right-list li:nth-child(2) .am-round {
+    background-color: #F37B1D;
+}
+.right-list li:nth-child(3) .am-round {
+    background-color: #5eb95e;
+}
+
+/* 首页上次播放 */
+#last-watch a {
+    color: #DD514C;
+}
+
+/* 播放器盒子 */
+.player-box {
+    height: 600px;
+    padding: 0;
+    background: #000 url("loading.gif"/*tpa=http://www.gddyu.com/static/images/loading.gif*/) no-repeat center;
+}
+@media only screen and (max-width: 600px) {
+    .player-box {
+        height: 300px;
+    }
+}
+
+/*弹动效果*/
+.hover-bounce:hover {
+    -webkit-animation:bounce 1s .1s ease both;
+    -moz-animation:bounce 1s .1s ease both;
+}
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform:scale(1)
+    }
+    10%, 20% {
+        -webkit-transform:scale(0.8) rotate(-2deg)
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform:scale(1.1) rotate(2deg)
+    }
+    40%, 60%, 80% {
+        -webkit-transform:scale(1.1) rotate(-2deg)
+    }
+    100% {
+        -webkit-transform:scale(1) rotate(0)
+    }
+}
+
+/* 底部导航栏 */ 
+.am-navbar .am-navbar-nav, .am-navbar-default .am-navbar-actions {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.am-navbar-default .am-navbar-actions a {
+    border-bottom: 0;
+}
+
+.am-navbar-default a {
+    color: #868686;
+}
+.am-navbar-nav a .am-navbar-label {
+    padding-top: 4px;
+}
+@media only screen and (min-width: 640px) {
+    .am-with-fixed-navbar {
+        padding-bottom: 0;
+    }
+}
+</style>  
+ </head>
+<body>
+
+    <script>
+            var tySiteInfo = { siteUrl: "http://www.baidu.com/", debug: false}
+    </script>
+    <style>
+        .btn-play-source {
+            margin: 0 5px 5px 0;
+        }
+    </style>
+    <div class="am-container">
+        <div class="am-panel-bd">
+            <!--PC和WAP自适应版-->
+            <a href="http://www.youku.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">优酷视频</a>
+            <a href="http://v.qq.com/" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">腾讯视频</a>
+            <a href="http://www.iqiyi.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">奇艺视频</a>
+            <a href="http://www.le.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">乐视视频</a>
+            <a href="http://www.mgtv.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">芒果视频</a>
+            <a href="http://tv.sohu.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">搜狐视频</a>           <a href="http://www.kuyunzy1.com/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">酷云资源站http</a>
+  
+            <a href="http://www.kuyun.co/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">酷云资源站https</a>
+            <a href="http://pianyuan.la/" rel="nofollow" target="_blank" style="color: #e9451e; padding-right: 10px; font-weight: bold;" class="am-icon-fire">3D和原盘</a>
+           </div>
+        <div class="am-alert am-alert-warning" data-am-alert style="display: block;">
+            <button type="button" class="am-close">×</button>
+            (一)、在下方粘贴视频地址， 点击"开始播放",如不能播放,点击视频播放窗口“不能播点我”切换线路,不能保证100%成功。不要使用IE内核浏览器，360等浏览器不得使用兼容模式。           （二）、免责声明：本站技术及视频资源来源于网络，纯粹用于技术研究，不得用于任何商业和非法用途，视频来源于网络资源，可能有广告，请不要相信。
+          
+         
+        </div>
+        <script>
+                (function () {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'push.js'
+                    }
+                    else {
+                        bp.src = 'push-1.js' /
+                }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+        </script>
+        <div class="am-input-group am-input-group-primary am-margin-bottom">
+            <input value="" id="video-url" type="text" class="am-form-field" placeholder="粘贴原视频播放链接..." required>
+            <span class="am-input-group-btn">
+                <button id="btn-vip-play" class="am-btn am-btn-primary" type="submit">
+                    <span class="am-icon-play-circle"></span>开始播放
+                </button>
+            </span>
+        </div>
+        <div class="am-panel am-panel-default">
+
+
+            <div class="am-panel-bd player-box">
+                <iframe id="ty-vip-player" src="" width="100%" height="100%" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+        </div>
+        <script  >
+var TYBase = new Base64();
+
+function Base64() {  
+   
+    // private property  
+    _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";  
+   
+    // public method for encoding  
+    this.encode = function (input) {  
+        var output = "";  
+        var chr1, chr2, chr3, enc1, enc2, enc3, enc4;  
+        var i = 0;  
+        input = _utf8_encode(input);  
+        while (i < input.length) {  
+            chr1 = input.charCodeAt(i++);  
+            chr2 = input.charCodeAt(i++);  
+            chr3 = input.charCodeAt(i++);  
+            enc1 = chr1 >> 2;  
+            enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);  
+            enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);  
+            enc4 = chr3 & 63;  
+            if (isNaN(chr2)) {  
+                enc3 = enc4 = 64;  
+            } else if (isNaN(chr3)) {  
+                enc4 = 64;  
+            }  
+            output = output +  
+            _keyStr.charAt(enc1) + _keyStr.charAt(enc2) +  
+            _keyStr.charAt(enc3) + _keyStr.charAt(enc4);  
+        }  
+        return output;  
+    }  
+   
+    // public method for decoding  
+    this.decode = function (input) {  
+        var output = "";  
+        var chr1, chr2, chr3;  
+        var enc1, enc2, enc3, enc4;  
+        var i = 0;  
+        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");  
+        while (i < input.length) {  
+            enc1 = _keyStr.indexOf(input.charAt(i++));  
+            enc2 = _keyStr.indexOf(input.charAt(i++));  
+            enc3 = _keyStr.indexOf(input.charAt(i++));  
+            enc4 = _keyStr.indexOf(input.charAt(i++));  
+            chr1 = (enc1 << 2) | (enc2 >> 4);  
+            chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);  
+            chr3 = ((enc3 & 3) << 6) | enc4;  
+            output = output + String.fromCharCode(chr1);  
+            if (enc3 != 64) {  
+                output = output + String.fromCharCode(chr2);  
+            }  
+            if (enc4 != 64) {  
+                output = output + String.fromCharCode(chr3);  
+            }  
+        }  
+        output = _utf8_decode(output);  
+        return output;  
+    }  
+   
+    // private method for UTF-8 encoding  
+    _utf8_encode = function (string) {  
+        string = string.replace(/\r\n/g,"\n");  
+        var utftext = "";  
+        for (var n = 0; n < string.length; n++) {  
+            var c = string.charCodeAt(n);  
+            if (c < 128) {  
+                utftext += String.fromCharCode(c);  
+            } else if((c > 127) && (c < 2048)) {  
+                utftext += String.fromCharCode((c >> 6) | 192);  
+                utftext += String.fromCharCode((c & 63) | 128);  
+            } else {  
+                utftext += String.fromCharCode((c >> 12) | 224);  
+                utftext += String.fromCharCode(((c >> 6) & 63) | 128);  
+                utftext += String.fromCharCode((c & 63) | 128);  
+            }  
+   
+        }  
+        return utftext;  
+    }  
+   
+    // private method for UTF-8 decoding  
+    _utf8_decode = function (utftext) {  
+        var string = "";  
+        var i = 0;  
+        var c = c1 = c2 = 0;  
+        while ( i < utftext.length ) {  
+            c = utftext.charCodeAt(i);  
+            if (c < 128) {  
+                string += String.fromCharCode(c);  
+                i++;  
+            } else if((c > 191) && (c < 224)) {  
+                c2 = utftext.charCodeAt(i+1);  
+                string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));  
+                i += 2;  
+            } else {  
+                c2 = utftext.charCodeAt(i+1);  
+                c3 = utftext.charCodeAt(i+2);  
+                string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));  
+                i += 3;  
+            }  
+        }  
+        return string;  
+    }  
+}  
+
+</script>
+     
+    </div>
+    <script>
+        var store;
+
+        tySiteInfo.videoApi = TYBase.decode("aHR0cHM6Ly9hcGkuc2lndWp4LmNvbS8/dXJsPQ==");
+
+        $(function () {
+            store = $.AMUI.store;
+
+           
+ 
+
+            $("#btn-vip-play").click(function () {
+                refreshVideo();
+            });
+        });
+
+        // 刷新视频播放
+        function refreshVideo() {
+            var videoUrl = $("#video-url").val();
+
+            if (videoUrl == "") {
+                layer.msg("链接不能为空！");
+                return false;
+            }
+
+            $("#ty-vip-player").attr("src", tySiteInfo.videoApi + videoUrl);
+
+            // 记录接口
+            if (store.enabled) {
+                store.set("videoApi", tySiteInfo.videoApi);    // 记录所用的api接口
+            }
+        }
+
+
+    </script>
+
+
+   
+
+    <script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+</body>
+</html>
+
+<script>
+    if ($("#video-url").val() != '') {
+        refreshVideo();
+    }
+</script>
