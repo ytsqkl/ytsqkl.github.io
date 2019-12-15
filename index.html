@@ -9,7 +9,7 @@
             margin: 0px;
             padding: 0px;
         }       
-
+		body{background-color:#DDF3FF}
         #nav {
            	 width: 980px;
            	 height: 300px;
@@ -21,7 +21,7 @@
             #nav ul li 
 		{
                 list-style: none;
-                background: rgba(0,0,0,.5);
+                background: rgba(0,0,0,0.3);
                 height: 105px;
                 width: 180px;
                 float: left;
@@ -34,7 +34,7 @@
                     content: "";
                     height: 105px;
                     width: 180px;
-                    background: rgba(0,0,0,.5);
+                    background: rgba(0,0,0,0.3);
                     position: absolute;
                     top: 0px;
                     left: 0px;
@@ -48,7 +48,7 @@
                     content: "";
                     height: 105px;
                     width: 180px;
-                    background: rgba(0,0,0,.5);
+                    background: rgba(0,0,0,0.3);
                     position: absolute;
                     top: 0px;
                     left: 0px;
@@ -106,25 +106,24 @@
 
 	
  <div id="nav">
- <script type="text/javascript">  
-   var content="";
-    var author="";   
-        $.getJSON("https://sslapi.hitokoto.cn/?encode=json",function(json)
-		{
-            content = json["hitokoto"];
-            author = json["from"];
-            $("#txt").html(content+"</br>作者:"+author);           
-        });
-   
-</script>  
-
+		 <script type="text/javascript">  
+		   var content="";
+			var author="";   
+				$.getJSON("https://sslapi.hitokoto.cn/?encode=json",function(json)
+				{
+					content = json["hitokoto"];
+					author = json["from"];
+					$("#txt").html(content+"</br>作者:"+author);           
+				});   
+		  </script>  
  
-	<span id="txt"> </span> 
+		<span id="txt"> </span> 
 
-	 </br>
-	</br>
-        <ul>
-            <li><a target="_blank" href="/vip"><img src="images/1.png"  /></a></li>
+		 </br>
+		 </br>
+      
+	  <ul>
+            <li><a target="_blank"  href="/vip"><img src="images/1.png"  /></a></li>
             <li><a target="_blank"  href="/sdr"><img src="images/2.png" /></a></li>
             <li><a target="_blank"  href="/sf"><img src="images/11.png" /></a></li>    
             <li><a target="_blank"  href="https://map.baidu.com/@13520391.89,4478567.99,12z"><img src="images/3.png" /></a></li>    
