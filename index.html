@@ -8,21 +8,18 @@
         * {
             margin: 0px;
             padding: 0px;
-        }
-
-        body {
-            background: url("images/bg.png");
-        }
+        }       
 
         #nav {
-            width: 980px;
-            height: 300px;
-            margin: 7% auto;
-		text-align:center;
-		line-height:50px;
-        }
+           	 width: 980px;
+           	 height: 300px;
+           	 margin: 7% auto;
+		 text-align:center;
+		 line-height:50px;
+               }
 
-            #nav ul li {
+            #nav ul li 
+		{
                 list-style: none;
                 background: rgba(0,0,0,.5);
                 height: 105px;
@@ -30,9 +27,10 @@
                 float: left;
                 margin: 30px 5px;
                 position: relative;
-            }
+           	 }
 
-                #nav ul li:before {
+                #nav ul li:before
+		 {
                     content: "";
                     height: 105px;
                     width: 180px;
@@ -45,7 +43,8 @@
                     -moz-transform: rotate(60deg);
                 }
 
-                #nav ul li:after {
+                #nav ul li:after 
+		{
                     content: "";
                     height: 105px;
                     width: 180px;
@@ -59,11 +58,13 @@
                     -moz-transform: rotate(-60deg);
                 }
 
-                #nav ul li.mar {
+                #nav ul li.mar 
+		{
                     margin-left: 100px;
                 }
 
-                #nav ul li img {
+                #nav ul li img
+		 {
                     top: 0px;
                     left: 0px;
                     right: 0px;
@@ -76,25 +77,28 @@
                     -moz-transition: 1s;
                 }
 
-                    #nav ul li img:hover {
+                    #nav ul li img:hover
+		 {
                         -webkit-transform: rotate(360deg) scale(1.5);
                         -moz-transform: rotate(360deg) scale(1.5);
                         -ms-transform: rotate(360deg) scale(1.5);
                         -o-transform: rotate(360deg) scale(1.5);
                     }
 
-        .foot {
+        .foot
+	 {
             width: 100%;
             height: 200px;
             text-align: center;
             color: black;
             clear: both
-        }
+          }
 
-            .foot span {
+            .foot span 
+		{
                 line-height: 400px;
                 vertical-align: middle;
-            }
+                }
     </style>
  
 </head>
@@ -102,17 +106,16 @@
 
 	
  <div id="nav">
- <script type="text/javascript">
-     
+ <script type="text/javascript">     
   
-var dictaColor = ''; //文字颜色
-function dowritedicta(num){
- var randid = Math.round(Math.random()*num);
- randid = randid >= num ? num-1 : randid;
-    
- document.write('<font color="' + dictaColor + '">' + dictumin[randid] + '</font>');
-}
-var dictumin = new Array(
+	var dictaColor = ''; //文字颜色
+	function dowritedicta(num)
+         {
+ 	    var randid = Math.round(Math.random()*num);
+	    randid = randid >= num ? num-1 : randid;    
+	    document.write('<font color="' + dictaColor + '">' + dictumin[randid] + '</font>');
+          }
+        var dictumin = new Array(
  '天才就其本质而论只不过是对事业、对工作过程的热爱而已。——高尔基',
  '勤能补拙是良训，一分辛劳一分才。——华罗庚',
  '知识就是力量。——培根',
@@ -171,7 +174,7 @@ var dictumin = new Array(
  '我的箴言始终是：无日不动笔；如果我有时让艺术之神瞌睡，也只为要使它醒后更兴奋。——贝多芬',
  '最大的天才尽管朝朝暮暮躺在青草地上，让微风吹来，眼望着天空，温柔的灵感也始终不光顾他.——黑格尔'
  );
-dowritedicta(dictumin.length);
+              dowritedicta(dictumin.length);
 	  </script>	
 	
 
@@ -187,17 +190,11 @@ dowritedicta(dictumin.length);
             <li ><a target="_blank"  href="/gdp"><img src="images/8.png" /></a></li>  
             <li ><a target="_blank"  href="https://github.com"><img src="images/21.png" /></a></li>  
             <li ><a target="_blank"  href="https://www.luochenzhimu.com/"><img src="images/9.png" /></a></li> 
-            <li><a target="_blank"  href="https://www.rtl-sdr.com/"><img src="images/15.png" /></a></li> 
-
-		
+            <li><a target="_blank"  href="https://www.rtl-sdr.com/"><img src="images/15.png" /></a></li> 		
         </ul>
     </div>
     <div class="foot">
         <span>Copyright&nbsp;2019-2020&nbsp; 刘中强　&nbsp;鲁ICP备19019897号-1</span>
-         
-
-   
- 
  
     </div>
 </body>
