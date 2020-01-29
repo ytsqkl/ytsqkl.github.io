@@ -1,4 +1,4 @@
-https://base64.supfree.net/
+http://tool.chinaz.com/Tools/Base64.aspx
 
 
 aHR0cHM6Ly9hcGkuc2lndWp4LmNvbS8/dXJsPQ==             
@@ -6,4 +6,5 @@ https://api.sigujx.com/?url=
 
 
 https://vip.116kan.com/?url=
-aHR0cHMlM0EvL3ZpcC4xMTZrYW4uY29tLyUzRnVybCUzRA==
+
+aHR0cHM6Ly92aXAuMTE2a2FuLmNvbS8/dXJsPQ==
