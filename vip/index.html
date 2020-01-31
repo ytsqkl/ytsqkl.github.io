@@ -38,16 +38,23 @@
               </button> 
           </div>
                  
-      <iframe id="player" src="http://livechina.cctv.com/zby/index.shtml?spm=C04362.PAup3mg36SVX.ETYxjxdiAIXp.1&id=INTEMyrWwhSrJyHyuMmILpsz200129" width="100%"  height="700"                   allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="yes"> 
+      <iframe id="player" src="http://tv.cctv.com/live/" width="100%"  height="700"  allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="yes"> 
       </iframe>
           
 
  <script>
         function kan() {
-            var jiekou = document.getElementById("jk");
-            var ifrm = document.getElementById("player");     
-            ifrm.src = jiekou.value+ document.getElementById("video-url").value;
-           alert(  ifrm.src );
+             if( document.getElementById("video-url").value !="")
+	{
+          	  var jiekou = document.getElementById("jk");
+                  var ifrm = document.getElementById("player");     
+           	  ifrm.src = jiekou.value+ document.getElementById("video-url").value;
+           	 alert(  ifrm.src );
+	}
+            else
+	{
+	 alert("您没有粘贴视频地址" );
+	}
         };
     </script>
 
