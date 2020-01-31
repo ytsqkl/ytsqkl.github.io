@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-
-<html lang="zh-ch">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset=UTF-8">
     <title>by 刘中强</title>   
     <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" />
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">   
+    <style type="text/css">  
+     @import url(style.css);/*这里是通过@import引用CSS的样式内容,不能通过href=引用*/  
+   </style> 
 </head>
 <body>
 <div class="inner-center main">
   <div class="content-inside">
-    <!-- slogan start -->
+    <!-- logo 开始 -->
     <div class="logo-box">
      <div class="logo-left">
         <img src="https://i.loli.net/2020/01/30/8Rn4CSMbxQTIosh.gif" alt="logo">
@@ -19,31 +19,19 @@
         <span>只言片语，可寻万物</span>
       </div>
     </div>
-    <!-- slogan end -->
+    <!-- logo 结束 -->
     
+
     <!-- 搜索框 start -->
-    <div id="search_form" class="search-section" target="_blank">
-      <div class="search-left" style="">
-        <div id="search_logo" data-type="google" class="search-logo baidu"></div>
-        <div class="input-wrap">
-          <input id="search_keyword" class="search-input" name="keyword" maxlength="100" autocomplete="off" type="text" placeholder="不懂么？不懂就搜，给老子搜！">
-          <div class="clear-keyword" id="clear_keyword" title="清空" style="display: none;">x</div>
-        </div>
-        <!--  搜索引擎 start  -->
-        <ul id="search_methods" class="search-methods" style="display: none;">
-          <li data-type="google" class="search-item google">谷歌</li>
-          <li data-type="baidu" class="search-item baidu">百度</li>
-          <li data-type="bing" class="search-item bing">必应</li>
-          <li data-type="so" class="search-item so">360搜索</li>
-          <li data-type="sogou" class="search-item sogou">搜狗</li>
-          <li data-type="wangpan" class="search-item wangpan">网盘搜索</li>
-        </ul>
-        <!--  搜索引擎 end  -->
-        <!--  搜索结果 start -->
-        <ul id="search_result" class="search-result" style="display: none;"><li class="result-item">你笑起来真好看</li><li class="result-item">你好旧时光</li><li class="result-item">你若三冬</li><li class="result-item">你懂的</li><li class="result-item">你好,king先生</li><li class="result-item">你是我的眼</li><li class="result-item">你的名字</li><li class="result-item">你和我的倾城时光</li><li class="result-item">你的样子</li><li class="result-item">你却爱着一个sb水千丞</li></ul>
-        <!--  搜索结果 end -->
-      </div>
-      <input class="search-submit" value="寻一下" id="search_submit" type="submit">
+   <div id="search_form" class="search-section" target="_blank">
+       <form action="http://www.baidu.com" target="_blank">
+          <div class="search-left">     
+             <div class="input-wrap">
+               <input id="kw" class="search-input" name="word" maxlength="100" type="text" baiduSug=1 placeholder="搜身"> 
+             </div>   
+              <input class="search-submit" value="寻一下" id="search_submit" type="submit">    
+           </div> 
+          </form>       
     </div>
     <!-- 搜索框 end -->
     
@@ -72,8 +60,10 @@
           <li><a href="http://www.99baiduyun.com/" class="jj-list-link" target="_blank">度盘搜索</a></li>   
           <li><a href="https://www.baiduwp.com" class="jj-list-link" target="_blank">度盘下载</a></li>  
           <li><a href="https://www.coolist.net/" class="jj-list-link" target="_blank">酷软清单</a></li>  
-          <li><a href="https://msdn.itellyou.cn/" class="jj-list-link" target="_blank">MSDN</a></li>   
-          <li><a href="https://www.wenshushu.cn/" class="jj-list-link" target="_blank">直链传文</a></li>
+          <li><a href="https://msdn.itellyou.cn/" class="jj-list-link" target="_blank">MSDN</a></li>  
+          <li><a href="https://tophub.today/" class="jj-list-link" target="_blank">各种头条</a></li>   
+          <li><a href="http://www.pickfree.cn/" class="jj-list-link" target="_blank">PickFree</a></li>   
+        
         </ul>
       </div>
        <div class="jj-list">
@@ -88,6 +78,7 @@
           <li><a href="http://www.qinms.com/webapp/barcode/index.aspx" class="jj-list-link" target="_blank">条形码</a></li>    
           <li><a href="https://www.kejibudayang.com/cn/" class="jj-list-link" target="_blank">VPN</a></li>  
           <li><a href="https://github.com/Wind4/vlmcsd" class="jj-list-link" target="_blank">KMS</a></li>
+          <li><a href="https://www.wenshushu.cn/" class="jj-list-link" target="_blank">直链传文</a></li>
       </div>
     </div>
     <!-- 导航地址 end -->
@@ -97,11 +88,9 @@
   <p>
    <a href="https://github.com/TopVitamin/static-nav" target="_blank">  </a>
   </p>
-  <p style="margin-top:8px;"> <a href="http://beian.miit.gov.cn" style="color:#8C8C8C;" target="_blank">鲁ICP备19019897号-1</a></p>
- 
-</footer>
- <script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
-<script src="static/js/keyword.js"></script>
-
+  <p style="margin-top:8px;"> <a href="http://beian.miit.gov.cn" style="color:#8C8C8C;" target="_blank">鲁ICP备19019897号-1</a></p> 
+</footer> 
 </body>
+                                                                 <!-- 百度搜索框提示 -->
+		<script charset="gbk" src="http://www.baidu.com/js/opensug.js"></script>
 </html>
