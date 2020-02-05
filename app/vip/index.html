@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIP视频BY刘中强</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 90%;
+            width: 100%;
+        }
+
+        .linkurl {
+            text-align: center;
+            display: block;
+            margin-top: 30px;
+            height: 5%;
+        }
+
+            .linkurl a {
+                color: red;
+                padding-right: 5px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+        select, input, button {
+            font-size: 16px;
+            border: none
+        }
+    </style>
+</head>
+<body style="background:black;">
+    <div style="width:100%;height:100%">
+        <div class="linkurl">
+            <a href="http://www.youku.com/" target="_blank">优酷网</a>
+            <a href="http://v.qq.com/" target="_blank">腾讯网</a>
+            <a href="http://www.iqiyi.com/" rel="nofollow" target="_blank">爱奇艺网</a>
+            <a href="https://vip.116kan.com/" rel="nofollow" target="_blank">聚合网</a>
+            <a href="http://www.kuyunzyw.tv/" rel="nofollow" target="_blank">酷云站</a>
+            <a href="http://pianyuan.la/" rel="nofollow" target="_blank">3D原盘</a>
+        </div>
+
+        <div style="text-align:center;display:block;width:100%;height:5%; margin-top:10px">
+            <select id="jk" style="width: 75px; height: 100%; vertical-align: top ">
+                <option value="https://vip.116kan.com/?url=" selected="selected">接口1</option>
+                <option value="https://api.sigujx.com/?url=">接口2</option>
+                <option value="https://jiexi.071811.cc/jx2.php?url=">接口3</option>
+                <option value="https://000o.cc/jx/ty.php?url=">接口4</option>
+                <option value="https://jx.618g.com/?url=">接口5</option>
+                <option value="https://030e.com/0302/?url=">接口6</option>
+            </select>
+
+            <input id="video-url" type="text" style="width: 180px ; height:95%;vertical-align:top" placeholder="粘贴视频地址到此" required />
+
+            <button id="play" style="width: 80px; height:100%;vertical-align:top" type="button" onclick=kan()>
+                <span style=""></span>开始播放
+            </button>
+        </div>
+        <div style="width:100%;height:100%;margin-top:5px;">
+            <iframe id="player" src="s.html"  width=100%" height="100%" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no">  
+          </iframe>
+        </div>
+    </div>
+    <script>
+        function kan() {
+            if (document.getElementById("video-url").value != "") {
+                var jiekou = document.getElementById("jk");
+                var ifrm = document.getElementById("player");
+                ifrm.src = jiekou.value + document.getElementById("video-url").value;
+
+            }
+            else {
+                alert("您没有粘贴视频地址");
+            }
+        };
+    </script>
+
+</body>
+</html>
+
