@@ -1,246 +1,239 @@
-﻿
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3fa68c305c0970d42accd851adc082a0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>珠穆朗玛峰导航</title>
-    <meta name="keywords" content="zmlmf.top，导航,网址之家,网址导航,安全网址,购物网址，电影网址，电视网址，音乐网址,上网导航,网址,上网导航,网址大全,网址导航,珠峰上网导航,珠峰网址,珠峰导航,珠峰网址大全,珠峰活动, 抽奖活动，网络安全导航,为网络安全爱好者提供便捷的安全站点导航服务.由网络攻防小组全力驱动!">
-    <meta name="description" content="zmlmf.top是汇集全网优质网址及资源的中文上网导航。及时收录影视、音乐、小说、游戏等分类的网址和内容，让您的网络生活更简单精彩。上网，从zmlmf.top开始。珠峰导航--一个主页，整个世界，为用户提供门户、新闻、视频、游戏、小说、彩票等各种分类的优秀内容和网站入口，提供简单便捷的上网导航服务。安全上网，从珠峰导航开始，从珠穆朗玛峰开始，安全导航,黑客导航,网络安全导航,安全团队,黑客团队,安全论坛,在线工具,安全圈导航,网络攻防小组">
-     
-    <link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/fomantic-ui/2.8.4/semantic.min.css">
-     <!--  <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/masthead.css">
-    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="text/javascript">
-        var analyticsAPI = {};
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="baidu-site-verification" content="olMGIssVTX" />
+    <title>摩尔斯码听写训练</title>
+    <meta name="keywords" content="莫尔斯码听写训练系统，莫尔斯码训练系统，莫尔斯码练习系统，莫尔斯码在线听写训练系统，莫尔斯码在线训练系统，莫尔斯码在线练习系统，摩尔斯码听写训练系统，摩尔斯码训练系统，摩尔斯码练习系统，摩尔斯码在线听写训练系统，摩尔斯码在线训练系统，摩尔斯码在线练习系统，摩尔斯电码听写训练系统，摩尔斯电码训练系统，摩尔斯电码练习系统，摩尔斯电码在线听写训练系统，摩尔斯电码在线训练系统，摩尔斯电码在线练习系统，莫尔斯电码听写训练系统，莫尔斯电码训练系统，莫尔斯电码练习系统，莫尔斯电码在线听写训练系统，莫尔斯电码在线训练系统，莫尔斯电码在线练习系统，莫斯码听写训练系统，莫斯码训练系统，莫斯码练习系统，莫斯码在线听写训练系统，莫斯码在线训练系统，莫斯码在线练习系统，摩斯码听写训练系统，摩斯码训练系统，摩斯码练习系统，摩斯码在线听写训练系统，摩斯码在线训练系统，摩斯码在线练习系统，摩斯密码听写训练系统，摩斯密码训练系统，摩斯密码练习系统，摩斯密码在线听写训练系统，摩斯密码在线训练系统，摩斯密码在线练习系统，莫斯密码听写训练系统，莫斯密码训练系统，莫斯密码练习系统，莫斯密码在线听写训练系统，莫斯密码在线训练系统，莫斯密码在线练习系统，摩尔斯密码听写训练系统，摩尔斯密码训练系统，摩尔斯密码练习系统，摩尔斯密码在线听写训练系统，摩尔斯密码在线训练系统，摩尔斯密码在线练习系统，莫尔斯密码听写训练系统，莫尔斯密码训练系统，莫尔斯密码练习系统，莫尔斯密码在线听写训练系统，莫尔斯密码在线训练系统，莫尔斯密码在线练习系统">
+    <link href="css/app.min.css?t=112" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="js/morse.min.js?t=11"></script>
+    
+
+    <script>
+        let win = window;
+        let docEL = document.documentElement;
+
+        //设置根比例尺寸
+        function setRemUnit() {
+
+            let w = document.documentElement.clientWidth;
+            if (w > 812) {
+                w = 812;
+            }
+            docEL.style.fontSize = w / 10 + 'px';
+        }
+        setRemUnit();
+        win.onresize = function () {
+            setRemUnit();
+            
+        }
+        document.oncontextmenu=function(){
+            event.returnValue=false;
+            
+        }
+        document.onselectstart=function(){
+            return false;
+        }
     </script>
 </head>
-<body>
 
-    <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment zoomed">
-            <div class="ui text container">
-                <a class="ui red pointing below label" href="https://yq.zmlmf.top/" target="_blank"><i class="alarm icon"></i>COVID-19新型冠状病毒肺炎疫情</a><h1 class="ui inverted logo header">
-                    <img class="ui centered image" src="/images/logo-white.svg" alt="Logo">
-                </h1>
-                <h2 class="ui inverted header">珠穆朗玛峰导航</h2>
-                <div id="search-shortcuts" class="ui labels">
-                    <a class="ui black label" data-search-service-id="baidu" data-tooltip="百度" data-variation="mini basic" data-position="top center" data-inverted=""><i class="paw blue inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="google" data-tooltip="谷歌" data-variation="mini basic" data-position="top center" data-inverted=""><i class="google red inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="bing" data-tooltip="必应" data-variation="mini basic" data-position="top center" data-inverted=""><i class="microsoft teal inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="baidumap" data-tooltip="百度地图" data-variation="mini basic" data-position="top center" data-inverted=""><i class="map marked alternate yellow inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="kuaidi100" data-tooltip="快递查询" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shipping fast green inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="17track" data-tooltip="国际查件" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shipping fast orange inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="baidunews" data-tooltip="百度资讯" data-variation="mini basic" data-position="top center" data-inverted=""><i class="newspaper blue inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="wikipedia" data-tooltip="维基百科" data-variation="mini basic" data-position="top center" data-inverted=""><i class="wikipedia w fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="github" data-tooltip="GitHub" data-variation="mini basic" data-position="top center" data-inverted=""><i class="github fitted icon"></i></a><a class="ui black label" data-search-service-id="stackoverflow" data-tooltip="Stack Overflow" data-variation="mini basic" data-position="top center" data-inverted=""><i class="stack overflow orange inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="zhihu" data-tooltip="知乎" data-variation="mini basic" data-position="top center" data-inverted=""><i class="zhihu blue inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="douban" data-tooltip="豆瓣" data-variation="mini basic" data-position="top center" data-inverted=""><i class="seedling green inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="weibo" data-tooltip="微博" data-variation="mini basic" data-position="top center" data-inverted=""><i class="weibo red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="weixinmp" data-tooltip="微信公众号" data-variation="mini basic" data-position="top center" data-inverted=""><i class="weixin green inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="weixinarticle" data-tooltip="微信文章" data-variation="mini basic" data-position="top center" data-inverted=""><i class="weixin green inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="minapp" data-tooltip="微信小程序" data-variation="mini basic" data-position="top center" data-inverted=""><i class="weixin green inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="baiduxueshu" data-tooltip="百度学术" data-variation="mini basic" data-position="top center" data-inverted=""><i class="graduation cap orange inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="googlescholar" data-tooltip="谷歌学术" data-variation="mini basic" data-position="top center" data-inverted=""><i class="graduation cap blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="ieeexplore" data-tooltip="IEEE Xplore" data-variation="mini basic" data-position="top center" data-inverted=""><i class="atom blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="etymonline" data-tooltip="Etymonline" data-variation="mini basic" data-position="top center" data-inverted=""><i class="language brown inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="mw" data-tooltip="Merriam-Webster" data-variation="mini basic" data-position="top center" data-inverted=""><i class="language red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="tianyancha" data-tooltip="天眼查" data-variation="mini basic" data-position="top center" data-inverted=""><i class="bullseye blue inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="taobao" data-tooltip="淘宝" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shopping cart orange inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="tmall" data-tooltip="天猫" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shopping bag red inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="jd" data-tooltip="京东" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shopping cart red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="yhd" data-tooltip="1号店" data-variation="mini basic" data-position="top center" data-inverted=""><i class="store red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="amazon" data-tooltip="亚马逊" data-variation="mini basic" data-position="top center" data-inverted=""><i class="amazon yellow inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="dangdang" data-tooltip="当当" data-variation="mini basic" data-position="top center" data-inverted=""><i class="shopping basket red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="music163" data-tooltip="网易云音乐" data-variation="mini basic" data-position="top center" data-inverted=""><i class="music red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="xiami" data-tooltip="虾米音乐" data-variation="mini basic" data-position="top center" data-inverted=""><i class="music orange inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="bilibili" data-tooltip="哔哩哔哩" data-variation="mini basic" data-position="top center" data-inverted=""><i class="tv pink inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="youtube" data-tooltip="YouTube" data-variation="mini basic" data-position="top center" data-inverted=""><i class="youtube red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="zimuku" data-tooltip="字幕库" data-variation="mini basic" data-position="top center" data-inverted=""><i class="closed captioning blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="zimuxia" data-tooltip="FIX字幕侠" data-variation="mini basic" data-position="top center" data-inverted=""><i class="closed captioning yellow inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="fkdy" data-tooltip="影视" data-variation="mini basic" data-position="top center" data-inverted=""><i class="film orange inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="painku" data-tooltip="片库" data-variation="mini basic" data-position="top center" data-inverted=""><i class="film blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="yyetss" data-tooltip="人人影视" data-variation="mini basic" data-position="top center" data-inverted=""><i class="film blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="dalipan" data-tooltip="大力盘" data-variation="mini basic" data-position="top center" data-inverted=""><i class="cloud download alternate orange inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="wangpan" data-tooltip="58网盘" data-variation="mini basic" data-position="top center" data-inverted=""><i class="cloud download alternate green inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="cilimao" data-tooltip="磁力猫" data-variation="mini basic" data-position="top center" data-inverted=""><i class="magnet yellow inverted fitted icon"></i></a><a class="ui black label" data-search-service-id="lime" data-tooltip="Lime Torrents" data-variation="mini basic" data-position="top center" data-inverted=""><i class="lemon green inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="onejav" data-tooltip="OneJav" data-variation="mini basic" data-position="top center" data-inverted=""><i class="film pink inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="byrsearch" data-tooltip="北邮人论坛1" data-variation="mini basic" data-position="top center" data-inverted=""><i class="comments red inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="icysearch" data-tooltip="北邮人论坛2" data-variation="mini basic" data-position="top center" data-inverted=""><i class="comments blue inverted fitted icon"></i></a><a class="ui black label hidden" data-search-service-id="byrbt" data-tooltip="北邮人BT" data-variation="mini basic" data-position="top center" data-inverted=""><i class="cloud download alternate teal inverted fitted icon"></i></a>
-                </div>
-
-                <div class="ui inverted fluid right action input" id="search-div">
-                    <input id="search-query" type="text" placeholder="立即搜索" autofocus="autofocus">
-                    <select id="search-services" class="ui compact selection dropdown">
-                        <option id="baidu" value="baidu" data-url="https://baidu.com/s?ie=utf-8&wd={query}" data-transcode="false">百度</option>
-                        <option id="google" value="google" data-url="https://google.com/search?q={query}" data-transcode="false">谷歌</option>
-                        <option id="bing" value="bing" data-url="https://cn.bing.com/search?q={query}" data-transcode="false">必应</option>
-                        <option id="baidumap" value="baidumap" data-url="https://api.map.baidu.com/geocoder?address={query}&output=html" data-transcode="false">百度地图</option>
-                        <option id="kuaidi100" value="kuaidi100" data-url="https://kuaidi100.com/?nu={query}" data-transcode="false">快递查询</option>
-                        <option id="17track" value="17track" data-url="https://t.17track.net/zh-cn#nums={query}" data-transcode="false">国际查件</option>
-                        <option id="baidunews" value="baidunews" data-url="https://baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&word={query}" data-transcode="false">百度资讯</option>
-                        <option id="wikipedia" value="wikipedia" data-url="https://wikipedia.org/wiki/{query}" data-transcode="false">维基百科</option>
-                        <option id="github" value="github" data-url="https://github.com/search?q={query}" data-transcode="false">GitHub</option>
-                        <option id="stackoverflow" value="stackoverflow" data-url="https://stackoverflow.com/search?q={query}" data-transcode="false">Stack Overflow</option>
-                        <option id="zhihu" value="zhihu" data-url="https://zhihu.com/search?q={query}" data-transcode="false">知乎</option>
-                        <option id="douban" value="douban" data-url="https://douban.com/search?q={query}" data-transcode="false">豆瓣</option>
-                        <option id="weibo" value="weibo" data-url="https://s.weibo.com/weibo/{query}" data-transcode="false">微博</option>
-                        <option id="weixinmp" value="weixinmp" data-url="http://weixin.sogou.com/weixin?type=1&query={query}&ie=utf8" data-transcode="false">微信公众号</option>
-                        <option id="weixinarticle" value="weixinarticle" data-url="http://weixin.sogou.com/weixin?type=2&query={query}&ie=utf8" data-transcode="false">微信文章</option>
-                        <option id="minapp" value="minapp" data-url="https://minapp.com/miniapp/search/?query={query}" data-transcode="false">微信小程序</option>
-                        <option id="baiduxueshu" value="baiduxueshu" data-url="https://xueshu.baidu.com/s?wd={query}" data-transcode="false">百度学术</option>
-                        <option id="googlescholar" value="googlescholar" data-url="https://scholar.google.com/scholar?q={query}" data-transcode="false">谷歌学术</option>
-                        <option id="ieeexplore" value="ieeexplore" data-url="http://ieeexplore.ieee.org/search/searchresult.jsp?queryText={query}" data-transcode="false">IEEE Xplore</option>
-                        <option id="etymonline" value="etymonline" data-url="https://etymonline.com/index.php?search={query}" data-transcode="false">Etymonline</option>
-                        <option id="mw" value="mw" data-url="https://merriam-webster.com/dictionary/{query}" data-transcode="false">Merriam-Webster</option>
-                        <option id="tianyancha" value="tianyancha" data-url="https://tianyancha.com/search?key={query}" data-transcode="false">天眼查</option>
-                        <option id="taobao" value="taobao" data-url="https://s.taobao.com/search?q={query}" data-transcode="false">淘宝</option>
-                        <option id="tmall" value="tmall" data-url="https://list.tmall.com/search_product.htm?q={query}" data-transcode="false">天猫</option>
-                        <option id="jd" value="jd" data-url="https://search.jd.com/Search?keyword={query}&enc=utf-8" data-transcode="false">京东</option>
-                        <option id="yhd" value="yhd" data-url="https://search.yhd.com/c0-0/k{query}/" data-transcode="false">1号店</option>
-                        <option id="amazon" value="amazon" data-url="https://amazon.cn/s?k={query}" data-transcode="false">亚马逊</option>
-                        <option id="dangdang" value="dangdang" data-url="http://search.dangdang.com/?key={query}" data-transcode="false">当当</option>
-                        <option id="music163" value="music163" data-url="https://music.163.com/#/search/m/?s={query}" data-transcode="false">网易云音乐</option>
-                        <option id="xiami" value="xiami" data-url="https://xiami.com/search?key={query}" data-transcode="false">虾米音乐</option>
-                        <option id="bilibili" value="bilibili" data-url="https://search.bilibili.com/all?keyword={query}" data-transcode="false">哔哩哔哩</option>
-                        <option id="youtube" value="youtube" data-url="https://youtube.com/results?search_query={query}" data-transcode="false">YouTube</option>
-                        <option id="zimuku" value="zimuku" data-url="http://zimuku.la/search?q={query}" data-transcode="false">字幕库</option>
-                        <option id="zimuxia" value="zimuxia" data-url="http://zimuxia.cn/?s={query}" data-transcode="false">FIX字幕侠</option>
-                        <option id="fkdy" value="fkdy" data-url="http://ifkdy.com/?q={query}" data-transcode="false">影视</option>
-                        <option id="painku" value="painku" data-url="https://pianku.tv/s/{query}.html" data-transcode="true" data-transcode-from="%" data-transcode-to="_">片库</option>
-                        <option id="yyetss" value="yyetss" data-url="http://www.yyetss.com/Search/index/?s_keys={query}" data-transcode="false">人人影视</option>
-                        <option id="dalipan" value="dalipan" data-url="https://www.dalipan.com/search?keyword={query}" data-transcode="false">大力盘</option>
-                        <option id="wangpan" value="wangpan" data-url="https://58wangpan.com/search/kw{query}" data-transcode="false">58网盘</option>
-                        <option id="cilimao" value="cilimao" data-url="https://cilimao.space/search?word={query}" data-transcode="false">磁力猫</option>
-                        <option id="lime" value="lime" data-url="https://limetorrents.cc/search/all/{query}/" data-transcode="false">Lime Torrents</option>
-                        <option id="onejav" value="onejav" data-url="https://onejav.com/search/{query}" data-transcode="false">OneJav</option>
-                        <option id="byrsearch" value="byrsearch" data-url="http://123.207.168.11/byrbbs/?key={query}" data-transcode="false">北邮人论坛1</option>
-                        <option id="icysearch" value="icysearch" data-url="http://search.icybee.cn/bbs/?key={query}" data-transcode="false">北邮人论坛2</option>
-                        <option id="byrbt" value="byrbt" data-url="https://bt.byr.cn/torrents.php?search={query}" data-transcode="false">北邮人BT</option>
-                    </select>
-                    <div id="search-button" class="ui black icon button"><i>搜索</i></div>
-                </div>
-                <div id="badges">
-                </div>
-                <div class="ui inverted selection link list">
-                    <a class="item" href="/donate/">请为辛苦的开发者众筹一杯冰可乐</a>
-                </div>
-                <div class="ui black label"><i class="globe icon"></i>支持 IPv6 访问</div>
-            </div>
+<body >
+    <noscript><iframe src="*.html"></iframe></noscript>
+ 
+    <div id="app">
+        <header>
+            <h1>摩尔斯码听写训练系统</h1>
+            <span class="w">码表</span>
+            <svg t="1587115116238" class="mb" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6528" width="32" height="32"><path d="M832 970.666667c-6.4 0-10.666667-2.133333-17.066667-6.4L725.333333 891.733333l-89.6 72.533334c-10.666667 8.533333-23.466667 8.533333-34.133333 0L512 891.733333l-89.6 72.533334c-10.666667 8.533333-23.466667 8.533333-34.133333 0l-91.733334-72.533334-91.733333 72.533334c-10.666667 8.533333-25.6 8.533333-36.266667-2.133334l-83.2-85.333333c-4.266667-4.266667-8.533333-10.666667-8.533333-19.2V157.866667c0-49.066667 42.666667-87.466667 96-87.466667h674.133333c53.333333 0 96 38.4 96 87.466667v699.733333c0 6.4-2.133333 14.933333-8.533333 19.2l-85.333333 85.333333c-2.133333 4.266667-10.666667 8.533333-17.066667 8.533334zM296.533333 832c6.4 0 12.8 2.133333 17.066667 6.4l91.733333 72.533333 89.6-72.533333c10.666667-8.533333 23.466667-8.533333 34.133334 0l89.6 72.533333 89.6-72.533333c10.666667-8.533333 23.466667-8.533333 34.133333 0l89.6 70.4 61.866667-59.733333V157.866667c0-19.2-19.2-34.133333-42.666667-34.133334H174.933333c-23.466667 0-42.666667 14.933333-42.666666 34.133334v689.066666L192 906.666667l89.6-70.4c4.266667-4.266667 10.666667-4.266667 14.933333-4.266667z" fill="#ffffff" p-id="6529"></path><path d="M228.266667 403.2h569.6v53.333333H228.266667zM228.266667 253.866667h270.933333v53.333333H228.266667zM221.866667 554.666667h578.133333v53.333333H221.866667z" fill="#ffffff" p-id="6530"></path></svg>
+            <span>说明</span>
+            <svg class="qu" t="2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3978" width="32" height="32"><path d="M518.542222 284.444444a145.066667 145.066667 0 0 0-108.373333 40.106667A144.213333 144.213333 0 0 0 369.777778 431.786667h66.275555a105.813333 105.813333 0 0 1 16.782223-64.568889A70.257778 70.257778 0 0 1 514.844444 341.333333a71.111111 71.111111 0 0 1 52.622223 18.773334 72.248889 72.248889 0 0 1 18.204444 51.2 73.955556 73.955556 0 0 1-16.782222 45.511111l-10.524445 11.946666a343.324444 343.324444 0 0 0-71.395555 77.653334 132.266667 132.266667 0 0 0-11.946667 59.448889v10.524444H540.444444v-10.524444a85.333333 85.333333 0 0 1 9.955556-41.813334 108.657778 108.657778 0 0 1 25.6-31.857777A611.84 611.84 0 0 0 630.613333 483.555556a123.164444 123.164444 0 0 0 23.608889-76.8 113.777778 113.777778 0 0 0-36.977778-89.6A142.222222 142.222222 0 0 0 518.542222 284.444444z m-10.524444 366.08a41.813333 41.813333 0 0 0-31.857778 12.515556 40.106667 40.106667 0 0 0-13.653333 31.857778 46.08 46.08 0 0 0 45.511111 44.657778 48.924444 48.924444 0 0 0 32.426666-12.231112 44.088889 44.088889 0 0 0 13.084445-32.426666A40.96 40.96 0 0 0 540.444444 662.755556a44.942222 44.942222 0 0 0-33.28-12.515556z" p-id="3979" fill="#bfbfbf"></path><path d="M512 56.888889A455.111111 455.111111 0 1 1 56.888889 512 455.111111 455.111111 0 0 1 512 56.888889m0-56.888889a512 512 0 1 0 512 512A512 512 0 0 0 512 0z" p-id="3980" fill="#bfbfbf"></path></svg>
+        </header>
+        <div class="box buttons" style="display: none;">
+            <div>生成报文</div>
+            <div>隐藏报文</div>
+            <div>开始听写</div>
+            <div>翻译报文</div>
+            <div>反译报文</div>
         </div>
-        <div class="ui vertical stripe links segment">
-            <div class="ui equal width stackable internally celled grid">
-                <div class="center aligned row">
-                    <div class="links column">
-                        <div class="ui top attached label">购物</div>
-                        <div class="ui labels">
-                            <a class="ui orange label" href="https://www.taobao.com/" target="_blank">淘宝</a>
-                            <a class="ui red label" href="https://www.tmall.com/" target="_blank">天猫</a>
-                            <a class="ui basic label" href="https://www.jd.com/" target="_blank">京东</a>
-                            <a class="ui basic label" href="https://www.amazon.cn/" target="_blank"><i class="amazon yellow icon"></i>Amazon</a>
-                            <a class="ui basic label" href="https://www.apple.com/" target="_blank"><i class="apple grey icon"></i>Apple</a>
-                            <a class="ui basic label" href="https://www.yhd.com/" target="_blank">一号店</a>
-                            <a class="ui basic label" href="http://www.dangdang.com/" target="_blank">当当</a>
-                            <a class="ui red label" href="http://www.uniqlo.cn/" target="_blank">UNIQLO</a>
-                            <a class="ui basic label" href="http://www.muji.com.cn/" target="_blank">MUJI</a>
-                            <a class="ui yellow label" href="https://www.ikea.cn/" target="_blank">IKEA</a>
-                            <a class="ui blue label" href="https://www.decathlon.com.cn/" target="_blank">Decathlon</a>
-                            <a class="ui basic label" href="https://zaozuo.com/" target="_blank">造作</a>
-                            <a class="ui basic label" href="http://www.smartisan.com/" target="_blank">锤子</a>
-                            <a class="ui black label" href="https://www.dji.com/" target="_blank">大疆</a>
-                            <a class="ui orange label" href="https://www.mi.com/" target="_blank">小米</a>
-                            <a class="ui brown label" href="https://xiaomiyoupin.com/" target="_blank">有品</a>
-                        </div>
-                    </div>
+        <div class="box set">
+            <div class="title">
+                <label>报文设置</label>
+                <div></div>
+                <a id="create">生成报文</a>
+                <span class="setshow" >︿</span>
+            </div>
+            <div class="items bwset">
+                <div class="item" >
+                    <label>报文类型</label>
+                    <span id="messageType"></span>
+                </div>
+                <div class="item" >
+                    <label>报文组数 </label>
+                    <span id="zs"></span>
+                </div>
+                <div class="item" >
+                    <label>发报速度 </label>
+                    <span id="speed"></span>
+                </div>
+                <div class="item" >
+                    <label>音调频率 </label>
+                    <span id="hz"></span>
+                </div>
+                <div class="item" >
+                    <label>环境噪声 </label>
+                    <div>
+                        <span id="hjzs"></span>
+                        <span id="qd"></span>
 
-                    <div class="links column">
-                        <div class="ui top attached label">影音</div>
-                        <div class="ui labels">
-                            <a class="ui basic label" href="http://tv.cctv.com/live/" target="_blank">CCTV直播</a>
-                            <a class="ui basic label" href="https://youku.com/" target="_blank">优酷</a>
-                            <a class="ui green label" href="https://iqiyi.com/" target="_blank">爱奇艺</a>
-                            <a class="ui basic label" href="https://v.qq.com/" target="_blank">腾讯视频</a>
-                            <a class="ui orange label" href="http://mgtv.com/" target="_blank">芒果</a>
-                            <a class="ui pink label" href="https://bilibili.com/" target="_blank">哔哩哔哩</a>
-                            <a class="ui basic label" href="https://ac.qq.com/" target="_blank">腾讯动漫</a>
-                            <a class="ui orange label" href="https://douyu.com/" target="_blank">斗鱼</a>
-                            <a class="ui red label" href="http://v.eyunzhu.com/" rel="nofollow" target="_blank">亿云竹</a>
-                            <a class="ui pink label" href="http://xjysw.top/" rel="nofollow" target="_blank">小建影视</a>
-                            <a class="ui pink label" href=" https://kuyun.tv/" rel="nofollow" target="_blank">酷云</a>
-                            <a class="ui basic label" href="https://youtube.com/" target="_blank">YouTube</a>
-                            <a class="ui green label" href="http://tool.liumingye.cn/music/" target="_blank">无损音乐</a>
-                            <a class="ui blue label" href="http://www.at38.cn" target="_blank">无损音乐</a>
-                            <a class="ui green label" href="http://music.taihe.com/" target="_blank">百度音乐</a>
-                            <a class="ui orange label" href="https://music.163.com/" target="_blank">网易音乐</a>
-                            <a class="ui green label" href="https://www.kugou.com/" target="_blank">酷狗音乐</a>
-                            <a class="ui blue label" href="http://www.kuwo.cn/" target="_blank">酷我音乐</a>
-                        </div>
-                    </div>
-
-                    <div class="links column">
-                        <div class="ui top attached label">工具</div>
-                        <div class="ui labels">
-                            <a class="ui blue label" href="https://wx.qq.com/" target="_blank">微信网页版</a>
-                            <a class="ui green label" href="http://www.12306.cn/" target="_blank">12306</a>
-                            <a class="ui blue label" href="http://www.kuaidi100.com/" target="_blank">快递查询</a>
-                            <a class="ui basic label" href="https://mail.qq.com/" target="_blank">QQ邮箱</a>
-                            <a class="ui orange label" href="https://mail.163.com/" target="_blank">163邮箱</a>
-                            <a class="ui basic label" href="https://mail.126.com/" target="_blank">126邮箱</a>
-                            <a class="ui blue label" href="https://mail.sohu.com/" target="_blank">搜狐邮箱</a>
-                            <a class="ui basic label" href="http://mail.sina.com.cn/" target="_blank">新浪邮箱</a>
-                            <a class="ui orange label" href="http://mail.tom.com/" target="_blank">TOM邮箱</a>
-                            <a class="ui basic label" href="https://mail.qq.com/" target="_blank">QQ邮箱</a>
-                            <a class="ui blue label" href="https://mail.google.com/" target="_blank">Gmail</a>
-                            <a class="ui orange label" href="https://translate.google.com/" target="_blank">谷歌翻译</a>
-                            <a class="ui basic label" href="https://fanyi.baidu.com/" target="_blank">百度翻译</a>
-                            <a class="ui green label" href="https://fanyi.baidu.com" target="_blank">百度翻译</a>
-                            <a class="ui basic label" href="https://pan.baidu.com/" target="_blank">百度网盘</a>
-                            <a class="ui blue label" href="http://pandownload.com/" target="_blank">度盘全速</a>
-                            <a class="ui basic label" href="https://www.tianyancha.com/" target="_blank">天眼查</a>
-                            <a class="ui red label" href="https://msdn.itellyou.cn/" target="_blank">MSDN</a>
-                        </div>
-                    </div>
-
-                    <div class="links column">
-                        <div class="ui top attached label">服务器相关</div>
-                        <div class="ui labels">
-                            <a class="ui orange label" href=" https://www.niaoyun.com/" target="_blank">小鸟云</a>
-                            <a class="ui red label" href="https://cloud.baidu.com/" target="_blank">百度云</a>
-                            <a class="ui basic label" href="https://www.aliyun.com" target="_blank">阿里云</a>
-                            <a class="ui basic label" href="https://www.alibabacloud.com" target="_blank">阿里国际</a>
-                            <a class="ui basic label" href="https://cloud.tencent.com/" target="_blank">腾讯云</a>
-                            <a class="ui basic label" href="https://www.ksyun.com/" target="_blank">金山云</a>
-                            <a class="ui basic label" href="https://www.huaweicloud.com" target="_blank">华为云</a>
-                            <a class="ui red label" href="https://www.ctyun.cn" target="_blank">天翼云</a>
-                            <a class="ui basic label" href="http://www.dandin.work" target="_blank">阿里国际ecs</a>
-                            <a class="ui yellow label" href="https://bt.cn/" target="_blank">宝塔面板</a>
-                            <a class="ui blue label" href="https://bbs.ccspump.com/" target="_blank">开心宝塔</a>
-                            <a class="ui basic label" href="http://ips.chacuo.net/" target="_blank">ip地址段</a>
-                            <a class="ui basic label" href="https://www.ipip.net/ip.html" target="_blank">IP地址库</a>
-                            <a class="ui basic label" href="http://mip.chinaz.com/" target="_blank">IP查询</a>
-                            <a class="ui basic label" href="http://ping.chinaz.com/" target="_blank">网站ping测</a>
-                        </div>
-                    </div>
-                    <div class="links column">
-                        <div class="ui top attached label">网络安全</div>
-                        <div class="ui labels">
-                            <a class="ui basic label" href="http://www.yunsuo.com.cn/" target="_blank">云锁</a>
-                            <a class="ui basic label" href="https://wangzhan.qianxin.com" target="_blank">网站卫士</a>
-                            <a class="ui basic label" href="http://www.weishi110.cn" target="_blank">网保G01</a>
-                            <a class="ui basic label" href="https://waf.islab.cn/" target="_blank">waf-三所</a>
-                            <a class="ui basic label" href="http://free.safedog.cn/" target="_blank">safedog</a>
-                            <a class="ui basic label" href="http://www.cnhonkerarmy.com" target="_blank">中国红客联盟</a>
-                            <a class="ui basic label" href="https://www.anva.org.cn/" target="_blank">反病毒联盟</a>
-                            <a class="ui basic label" href="https://www.cert.org.cn/" target="_blank">应急中心</a>
-                            <a class="ui basic label" href="http://lab.cert.org.cn/" target="_blank">应急中心LAB</a>
-                            <a class="ui basic label" href="https://share.anva.org.cn/web/publicity/listPhishing" target="_blank">威胁共享</a>
-                            <a class="ui basic label" href="https://www.cnvd.org.cn/" target="_blank">漏洞共享</a>
-                            <a class="ui basic label" href="http://conf.cert.org.cn/" target="_blank">安全年会</a>
-                            <a class="ui basic label" href="http://www.cac.gov.cn/" target="_blank">国家网信办</a>
-                            <a class="ui basic label" href="https://cert.360.cn/" target="_blank">360响应中心</a>
-                            <a class="ui basic label" href="https://fuwu.360.cn/jiance" target="_blank">360安全服务</a>
-                            <a class="ui basic label" href="https://habo.qq.com/" target="_blank">哈勃分析</a>
-                            <a class="ui basic label" href="https://cybermap.kaspersky.com/" target="_blank">卡巴安全图</a>
-                            <a class="ui basic label" href="https://www.fireeye.com/cyber-map/threat-map.html" target="_blank">火眼安全图</a>
-
-                        </div>
                     </div>
                 </div>
-
             </div>
+            <div class="options" style="display: none;">
+                <div class="ranges" for="messageType">
+                    <input id=item1 type="radio" name="messageType" />
+                    <label for="item1">长数字</label>
+                    <input id=item2 type="radio" name="messageType" checked="checked" />
+                    <label for="item2">短数字</label>
+                    <input id=item3 type="radio" name="messageType" />
+                    <label for="item3">字母</label>
+                    <input id=item01 type="radio" name="messageType" />
+                    <label for="item01">符号</label>
+                    <input id=item4 type="radio" name="messageType" />
+                    <label for="item4">混合码</label>
 
-            <div class="ui inverted vertical footer segment">
-                <div class="ui container juzhong">
-                    <h4 class="ui inverted header">珠穆朗玛峰导航</h4>
-                    <div class="ui inverted link list">
-                        <div class="item"><a href="http://beian.miit.gov.cn"> 鲁ICP备19019897号-1</a></div>
-                        <div class="item"><a href="http://beian.miit.gov.cn"> 鲁ICP备19019897号-2</a></div>
-                        <div class="item"><a class="item" href="https://github.com/BYR-Navi/BYR-Navi" target="_blank"><i class="github icon"></i>源码地址</a></div>
-                        <div class="item"><a class="item" href="https://byr-navi.com" target="_blank">对原网站做了精简和资源本地化，提高打开速度</a></div>
-                        <div class="item"><a class="item" href="https://github.com/fomantic/Fomantic-UI/releases" target="_blank">UI采用fomantic-ui</a></div>
+                </div>
+                <div class="ranges" for="zs">
+                    <input id=item5 type="range" value="100" step="10" min="10" max="400" />
+                    <label for="item5"></label>
+
+                </div>
+                <div class="ranges" for="speed">
+                    <input id=item6 type="range" value="80" step="5" min="10" max="300" />
+                    <label for="item7"></label>
+
+                </div>
+                <div class="ranges" for="hz">
+                    <input id=item7 type="range" value="1200" step="100" min="100" max="3000" />
+                    <label for="item7"></label>
+
+                </div>
+                <div class="ranges" for="hjzs">
+                    <span class="bold">类型:</span>
+                    <input id=noiseSelect type="radio" name="hjzs" checked="checked" />
+                    <label for="noiseSelect">无</label>
+                    <input id=item12 type="radio" name="hjzs" />
+                    <label for="item12">狂风</label>
+                    <input id=item13 type="radio" name="hjzs" />
+                    <label for="item13">空间</label>
+                    <input id=item14 type="radio" name="hjzs" />
+                    <label for="item14">卫星</label>
+                    <input id="bzs" type="radio" name="hjzs" />
+                    <label for="bzs">白噪声</label>
+                    <span class="qd bold">强度:</span>
+                    
+                    <div class="qd " for="qd">
+                        <input id=item21 type="radio" name="qd" />
+                        <label for="item21">1</label>
+                        <input id=item22 type="radio" name="qd" />
+                        <label for="item22">2</label>
+                        <input id=item23 type="radio" name="qd" />
+                        <label for="item23">3</label>
                     </div>
+
+
                 </div>
             </div>
         </div>
+        <div class="box no">
+            <div class="title">
+                <label>报文内容</label>
+                <div id="pages"></div>
+                <a id="begin">开始听写</a>
+                <span class="setshow">︿</span>
+            </div>
+            <div class="items">
+                <div id="showoption">
+
+                    <span>报文</span>
+                    <input type="checkbox" id="item52" name="yw" checked="checked" />
+                    <label for="item52"></label>
+                    <span>译文</span>
+                    <input type="checkbox" id="item51" name="bw" checked="checked" />
+                    <label for="item51"></label>
+                    <span>屏显</span>
+                    <input type="checkbox" id="screenshow" checked="checked"/>
+                    <label for="screenshow"></label>
+
+
+                </div>
+                <div id="showDiv"></div>
+            </div>
+        </div>
+
     </div>
-    
-    <script type="text/javascript" src="https://lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://lib.baomitu.com/fomantic-ui/2.8.4/semantic.min.js"></script>
- <!-- 
-    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/semantic.min.js"></script>
-   -->
-    <script type="text/javascript" src="/assets/js/common.js"></script>
-    <script type="text/javascript" src="/assets/js/dayjs.min.js"></script>
-    <script type="text/javascript" src="/assets/js/locale/zh-cn.js"></script>
-    <script type="text/javascript" src="/assets/js/relativeTime.js"></script>
-    <script type="text/javascript" src="/assets/js/js.cookie.js"></script>
-    <script type="text/javascript" src="/assets/js/suggest-query.min.js"></script>
-    <script type="text/javascript" src="/assets/js/home.js"></script>
-    <script type="text/javascript" src="/assets/js/mouseclick_texiao.js"></script>
+    <footer>
+        <p>Copyright © 2020　设计：王炳东（dongandxiu@163.com）　顾问：刘中强</p>
+        <script>
+            if(document.location.href.indexOf('zmlmf.top')>0){
+                document.write(' <p ><a href="http://www.beian.miit.gov.cn/"> 鲁ICP备19019897号-1　鲁ICP备19019897号-2</a></p>');
+
+            }
+            
+        </script>
+       
+    </footer>
+    <div class="mask" >
+            <div id="mb" class="info" onclick="event.stopPropagation()">
+                    <div class="close" ></div>
+                    <div class="infotitle">
+                        <span>码表</span>
+                    </div>
+                    <div class="infocontent">
+                        <div>基本码表</div>
+                        
+                        <p>摩尔斯电码定义了包括：英文字母A-Z（无大小写区分）十进制数字0-9，以及“？”,“/”,“（）”,“－”,“．”很适合英语的通信。至今仍有很多地方在使用。在业余无线电通信中，他是全世界运用统一的电码。下面列出的是基本码表：
+                        </p>
+                        <div id="morsetable"></div>
+                    </div>
+                </div>
+        <div id="sm" class="info" onclick="event.stopPropagation()">
+            <div class="close" ></div>
+            <div class="infotitle">
+                <span>系统说明</span>
+            </div>
+            <div class="infocontent">
+                <div>1、说明</div>
+                <p>第一步：点击“生成报文”</p>
+                <p>第二步：点击“开始听写”</p>
+                <div>2、报文类型</div>
+                <p>长数字（数字-长码，通用）</p>
+                <p>短数字（数字-短码，纯数码报用）</p>
+                <p>字码-字母（通用）</p>
+                <p>符号（通用）</p>
+                <p>长码数字，字母，标点混合码（通用）</p>
+                
+            </div>
+        </div>
+        
+    </div>
+    <div id="canvasbox">
+        <canvas></canvas>
+    </div>
+    <script>
+         
+    </script>
 </body>
+
 </html>
