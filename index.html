@@ -1,0 +1,169 @@
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1" />
+<title>Wideband shortwave radio receiver map</title>
+<!--
+Web page for dyatlov map maker
+Copyright 2020 Pierre Ynard
+Licensed under GPLv3+
+
+Edit this file and follow the instructions below to install and set up
+your dyatlov map instance.
+-->
+
+<!-- 1. Map toolkit
+Choose and set up one of the map toolkits below. You need only one of
+them; comment out the others.
+-->
+
+<!--
+Google Maps API: fill in the API key, or comment out if using Leaflet
+instead.
+-->
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+-->
+
+<!--
+Leaflet map API. Implementation available at:
+https://leafletjs.com/
+Install local copy, point to remote hosting or comment out if using
+Google Maps instead. You will optionally need to provide the
+images/layers.png and images/layers-2x.png files as well.
+-->
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+
+<!-- 2. Optional add-ons
+For a fully featured map, you can set up each of the optional add-ons
+below.
+-->
+
+<!--
+Day/night overlay library. Supported implementations:
+https://github.com/marmat/google-maps-api-addons (with Google Maps)
+https://github.com/rossengeorgiev/nite-overlay (with Google Maps)
+https://github.com/joergdietrich/Leaflet.Terminator (with Leaflet)
+Optional. Pick one implementation compatible with your map API above,
+and install a local copy or point to remote hosting of it, or comment
+out if unused.
+-->
+<script src="daynightoverlay-leaflet.js"></script>
+
+<!--
+Time manipulation library. Supported implementations:
+https://momentjs.com/
+Optional. Install local copy, point to remote hosting or comment out.
+-->
+<script src="moment.js"></script>
+
+<!--
+Receiver signal/noise ratio data
+Contact Pierre Ynard for file availability
+-->
+<script src="snr.js"></script>
+
+<!--
+Blocked spectrum data
+Contact Pierre Ynard for file availability
+-->
+<script src="blockedspectrum.js"></script>
+
+<!-- 3. Dyatlov map maker resources
+The resources below, along with this web page, are part of
+or generated with the dyatlov map maker, available at:
+https://github.com/priyom/dyatlov
+Install local copies or point to remote hosting. Data sources are all
+recommended, but comment out any unused one.
+-->
+
+<!--
+Static receiver data. You need this data source to feature on your map
+select receivers such as the UTwente WebSDR.
+-->
+<script src="static_rx.js"></script>
+
+<!--
+Dynamically generated KiwiSDR.com receiver data. You need this data
+source to feature the KiwiSDR network on your map. Generate and keep
+this file up to date by running the `kiwisdr_com-update` script
+regularly. Caution: running this script as an automated task may open
+attack vectors onto your system, so be sure to use appropriate system
+administration precautions.
+-->
+<script src="http://rx.linkfanel.net/kiwisdr_com.js"></script>
+
+<!--
+Dyatlov map maker API. Required.
+-->
+<script src="dyatlov.js-cb"></script>
+
+<!-- 4. Local configuration
+You can optionally edit the local configuration below to further suit
+your needs.
+-->
+<script>
+// toolkit can be one of 'GoogleMaps', 'Leaflet' or 'Builtin'
+// Leave unset for autodetection
+var toolkit;
+var config;
+
+// Tile hosting provider configuration for Leaflet toolkit
+//
+// Uncomment and edit to replace the default OpenStreetMap map tiles by
+// your assortment of different selectable tilesets and providers. You
+// will need to provide the images/layers.png and images/layers-2x.png
+// icons as well. The first tileset listed will be used as default when
+// loading the map. You may want to choose one of the satellite picture
+// tile providers below: register an account with them and fill in the
+// required API credentials.
+//
+// Don't consider this configuration as a stable API: just follow and
+// adapt the examples provided.
+var leaflet_config = [
+	{ // OpenStreetMap: free and ready to use
+		label: 'Map',
+		url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	},
+/*
+	{ // MapTiler: fill in API key
+		label: 'Satellite',
+		url: 'https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}{r}.jpg?key=fpvWfuUc1I4CEHfCdRbl',
+		attribution: '&copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	},
+*/
+/*
+	{ // HERE (formerly Nokia Maps): fill in API key
+		label: 'Satellite',
+		url: 'https://1.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/jpg?apiKey=',
+		attribution: '&copy; <a href="http://developer.here.com">HERE</a>',
+	},
+	{ // Esri: register ArcGIS Online account
+		label: 'Satellite',
+		url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+		attribution: 'Powered by <a href="https://www.esri.com/">Esri</a> | Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community',
+	},
+	{ // Mapbox: fill in access token and install images/mapbox-wordmark.svg
+		label: 'Satellite',
+		url: 'https://{s}.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}{r}.jpg90?access_token=',
+		attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://www.maxar.com/">Maxar</a> <strong><a href="https://www.mapbox.com/map-feedback/">Improve this map</a></strong> <img src="images/mapbox-wordmark.svg" width="65" height="20" />',
+	},
+*/
+];
+toolkit = 'Leaflet', config = leaflet_config;
+
+</script>
+</head>
+
+<body onload="new Dyatlov('map', toolkit, config)">
+<div id="map" style="height: 100%; z-index: 1;"></div>
+<div style="position: absolute; bottom: 0; z-index: 2; background: rgba(255, 255, 255, 0.7); font-size: xx-small; font-family: sans-serif;">
+Rendered with <a href="https://github.com/priyom/dyatlov">dyatlov map maker</a>,
+dynamic receiver data from <a href="http://kiwisdr.com/public/">KiwiSDR.com</a>
+| <a href="https://github.com/priyom/dyatlov#legend">Legend</a>
+</div>
+</body>
+</html>
