@@ -1,239 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?3fa68c305c0970d42accd851adc082a0";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="baidu-site-verification" content="olMGIssVTX" />
-    <title>摩尔斯码听写训练</title>
-    <meta name="keywords" content="莫尔斯码听写训练系统，莫尔斯码训练系统，莫尔斯码练习系统，莫尔斯码在线听写训练系统，莫尔斯码在线训练系统，莫尔斯码在线练习系统，摩尔斯码听写训练系统，摩尔斯码训练系统，摩尔斯码练习系统，摩尔斯码在线听写训练系统，摩尔斯码在线训练系统，摩尔斯码在线练习系统，摩尔斯电码听写训练系统，摩尔斯电码训练系统，摩尔斯电码练习系统，摩尔斯电码在线听写训练系统，摩尔斯电码在线训练系统，摩尔斯电码在线练习系统，莫尔斯电码听写训练系统，莫尔斯电码训练系统，莫尔斯电码练习系统，莫尔斯电码在线听写训练系统，莫尔斯电码在线训练系统，莫尔斯电码在线练习系统，莫斯码听写训练系统，莫斯码训练系统，莫斯码练习系统，莫斯码在线听写训练系统，莫斯码在线训练系统，莫斯码在线练习系统，摩斯码听写训练系统，摩斯码训练系统，摩斯码练习系统，摩斯码在线听写训练系统，摩斯码在线训练系统，摩斯码在线练习系统，摩斯密码听写训练系统，摩斯密码训练系统，摩斯密码练习系统，摩斯密码在线听写训练系统，摩斯密码在线训练系统，摩斯密码在线练习系统，莫斯密码听写训练系统，莫斯密码训练系统，莫斯密码练习系统，莫斯密码在线听写训练系统，莫斯密码在线训练系统，莫斯密码在线练习系统，摩尔斯密码听写训练系统，摩尔斯密码训练系统，摩尔斯密码练习系统，摩尔斯密码在线听写训练系统，摩尔斯密码在线训练系统，摩尔斯密码在线练习系统，莫尔斯密码听写训练系统，莫尔斯密码训练系统，莫尔斯密码练习系统，莫尔斯密码在线听写训练系统，莫尔斯密码在线训练系统，莫尔斯密码在线练习系统">
-    <link href="css/app.min.css?t=112" rel="stylesheet" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <script src="js/morse.min.js?t=11"></script>
-    
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1" />
+<title>Wideband shortwave radio receiver map</title>
+<!--
+Web page for dyatlov map maker
+Copyright 2020 Pierre Ynard
+Licensed under GPLv3+
 
-    <script>
-        let win = window;
-        let docEL = document.documentElement;
+Edit this file and follow the instructions below to install and set up
+your dyatlov map instance.
+-->
 
-        //设置根比例尺寸
-        function setRemUnit() {
+<!-- 1. Map toolkit
+Choose and set up one of the map toolkits below. You need only one of
+them; comment out the others.
+-->
 
-            let w = document.documentElement.clientWidth;
-            if (w > 812) {
-                w = 812;
-            }
-            docEL.style.fontSize = w / 10 + 'px';
-        }
-        setRemUnit();
-        win.onresize = function () {
-            setRemUnit();
-            
-        }
-        document.oncontextmenu=function(){
-            event.returnValue=false;
-            
-        }
-        document.onselectstart=function(){
-            return false;
-        }
-    </script>
+<!--
+Google Maps API: fill in the API key, or comment out if using Leaflet
+instead.
+-->
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+-->
+
+<!--
+Leaflet map API. Implementation available at:
+https://leafletjs.com/
+Install local copy, point to remote hosting or comment out if using
+Google Maps instead. You will optionally need to provide the
+images/layers.png and images/layers-2x.png files as well.
+-->
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+
+<!-- 2. Optional add-ons
+For a fully featured map, you can set up each of the optional add-ons
+below.
+-->
+
+<!--
+Day/night overlay library. Supported implementations:
+https://github.com/marmat/google-maps-api-addons (with Google Maps)
+https://github.com/rossengeorgiev/nite-overlay (with Google Maps)
+https://github.com/joergdietrich/Leaflet.Terminator (with Leaflet)
+Optional. Pick one implementation compatible with your map API above,
+and install a local copy or point to remote hosting of it, or comment
+out if unused.
+-->
+<script src="daynightoverlay-leaflet.js"></script>
+
+<!--
+Time manipulation library. Supported implementations:
+https://momentjs.com/
+Optional. Install local copy, point to remote hosting or comment out.
+-->
+<script src="moment.js"></script>
+
+<!--
+Receiver signal/noise ratio data
+Contact Pierre Ynard for file availability
+-->
+<script src="snr.js"></script>
+
+<!--
+Blocked spectrum data
+Contact Pierre Ynard for file availability
+-->
+<script src="blockedspectrum.js"></script>
+
+<!-- 3. Dyatlov map maker resources
+The resources below, along with this web page, are part of
+or generated with the dyatlov map maker, available at:
+https://github.com/priyom/dyatlov
+Install local copies or point to remote hosting. Data sources are all
+recommended, but comment out any unused one.
+-->
+
+<!--
+Static receiver data. You need this data source to feature on your map
+select receivers such as the UTwente WebSDR.
+-->
+<script src="static_rx.js"></script>
+
+<!--
+Dynamically generated KiwiSDR.com receiver data. You need this data
+source to feature the KiwiSDR network on your map. Generate and keep
+this file up to date by running the `kiwisdr_com-update` script
+regularly. Caution: running this script as an automated task may open
+attack vectors onto your system, so be sure to use appropriate system
+administration precautions.
+-->
+<script src="kiwisdr_com.js"></script>
+
+<!--
+Dyatlov map maker API. Required.
+-->
+<script src="dyatlov.js?cb"></script>
+
+<!-- 4. Local configuration
+You can optionally edit the local configuration below to further suit
+your needs.
+-->
+<script>
+// toolkit can be one of 'GoogleMaps', 'Leaflet' or 'Builtin'
+// Leave unset for autodetection
+var toolkit;
+var config;
+
+// Tile hosting provider configuration for Leaflet toolkit
+//
+// Uncomment and edit to replace the default OpenStreetMap map tiles by
+// your assortment of different selectable tilesets and providers. You
+// will need to provide the images/layers.png and images/layers-2x.png
+// icons as well. The first tileset listed will be used as default when
+// loading the map. You may want to choose one of the satellite picture
+// tile providers below: register an account with them and fill in the
+// required API credentials.
+//
+// Don't consider this configuration as a stable API: just follow and
+// adapt the examples provided.
+var leaflet_config = [
+	{ // OpenStreetMap: free and ready to use
+		label: 'Map',
+		url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	},
+/*
+	{ // MapTiler: fill in API key
+		label: 'Satellite',
+		url: 'https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}{r}.jpg?key=fpvWfuUc1I4CEHfCdRbl',
+		attribution: '&copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	},
+*/
+/*
+	{ // HERE (formerly Nokia Maps): fill in API key
+		label: 'Satellite',
+		url: 'https://1.aerial.maps.ls.hereapi.com/maptile/2.1/maptile/newest/hybrid.day/{z}/{x}/{y}/256/jpg?apiKey=',
+		attribution: '&copy; <a href="http://developer.here.com">HERE</a>',
+	},
+	{ // Esri: register ArcGIS Online account
+		label: 'Satellite',
+		url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+		attribution: 'Powered by <a href="https://www.esri.com/">Esri</a> | Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community',
+	},
+	{ // Mapbox: fill in access token and install images/mapbox-wordmark.svg
+		label: 'Satellite',
+		url: 'https://{s}.tiles.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}{r}.jpg90?access_token=',
+		attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://www.maxar.com/">Maxar</a> <strong><a href="https://www.mapbox.com/map-feedback/">Improve this map</a></strong> <img src="images/mapbox-wordmark.svg" width="65" height="20" />',
+	},
+*/
+];
+toolkit = 'Leaflet', config = leaflet_config;
+
+</script>
 </head>
 
-<body >
-    <noscript><iframe src="*.html"></iframe></noscript>
- 
-    <div id="app">
-        <header>
-            <h1>摩尔斯码听写训练系统</h1>
-            <span class="w">码表</span>
-            <svg t="1587115116238" class="mb" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6528" width="32" height="32"><path d="M832 970.666667c-6.4 0-10.666667-2.133333-17.066667-6.4L725.333333 891.733333l-89.6 72.533334c-10.666667 8.533333-23.466667 8.533333-34.133333 0L512 891.733333l-89.6 72.533334c-10.666667 8.533333-23.466667 8.533333-34.133333 0l-91.733334-72.533334-91.733333 72.533334c-10.666667 8.533333-25.6 8.533333-36.266667-2.133334l-83.2-85.333333c-4.266667-4.266667-8.533333-10.666667-8.533333-19.2V157.866667c0-49.066667 42.666667-87.466667 96-87.466667h674.133333c53.333333 0 96 38.4 96 87.466667v699.733333c0 6.4-2.133333 14.933333-8.533333 19.2l-85.333333 85.333333c-2.133333 4.266667-10.666667 8.533333-17.066667 8.533334zM296.533333 832c6.4 0 12.8 2.133333 17.066667 6.4l91.733333 72.533333 89.6-72.533333c10.666667-8.533333 23.466667-8.533333 34.133334 0l89.6 72.533333 89.6-72.533333c10.666667-8.533333 23.466667-8.533333 34.133333 0l89.6 70.4 61.866667-59.733333V157.866667c0-19.2-19.2-34.133333-42.666667-34.133334H174.933333c-23.466667 0-42.666667 14.933333-42.666666 34.133334v689.066666L192 906.666667l89.6-70.4c4.266667-4.266667 10.666667-4.266667 14.933333-4.266667z" fill="#ffffff" p-id="6529"></path><path d="M228.266667 403.2h569.6v53.333333H228.266667zM228.266667 253.866667h270.933333v53.333333H228.266667zM221.866667 554.666667h578.133333v53.333333H221.866667z" fill="#ffffff" p-id="6530"></path></svg>
-            <span>说明</span>
-            <svg class="qu" t="2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3978" width="32" height="32"><path d="M518.542222 284.444444a145.066667 145.066667 0 0 0-108.373333 40.106667A144.213333 144.213333 0 0 0 369.777778 431.786667h66.275555a105.813333 105.813333 0 0 1 16.782223-64.568889A70.257778 70.257778 0 0 1 514.844444 341.333333a71.111111 71.111111 0 0 1 52.622223 18.773334 72.248889 72.248889 0 0 1 18.204444 51.2 73.955556 73.955556 0 0 1-16.782222 45.511111l-10.524445 11.946666a343.324444 343.324444 0 0 0-71.395555 77.653334 132.266667 132.266667 0 0 0-11.946667 59.448889v10.524444H540.444444v-10.524444a85.333333 85.333333 0 0 1 9.955556-41.813334 108.657778 108.657778 0 0 1 25.6-31.857777A611.84 611.84 0 0 0 630.613333 483.555556a123.164444 123.164444 0 0 0 23.608889-76.8 113.777778 113.777778 0 0 0-36.977778-89.6A142.222222 142.222222 0 0 0 518.542222 284.444444z m-10.524444 366.08a41.813333 41.813333 0 0 0-31.857778 12.515556 40.106667 40.106667 0 0 0-13.653333 31.857778 46.08 46.08 0 0 0 45.511111 44.657778 48.924444 48.924444 0 0 0 32.426666-12.231112 44.088889 44.088889 0 0 0 13.084445-32.426666A40.96 40.96 0 0 0 540.444444 662.755556a44.942222 44.942222 0 0 0-33.28-12.515556z" p-id="3979" fill="#bfbfbf"></path><path d="M512 56.888889A455.111111 455.111111 0 1 1 56.888889 512 455.111111 455.111111 0 0 1 512 56.888889m0-56.888889a512 512 0 1 0 512 512A512 512 0 0 0 512 0z" p-id="3980" fill="#bfbfbf"></path></svg>
-        </header>
-        <div class="box buttons" style="display: none;">
-            <div>生成报文</div>
-            <div>隐藏报文</div>
-            <div>开始听写</div>
-            <div>翻译报文</div>
-            <div>反译报文</div>
-        </div>
-        <div class="box set">
-            <div class="title">
-                <label>报文设置</label>
-                <div></div>
-                <a id="create">生成报文</a>
-                <span class="setshow" >︿</span>
-            </div>
-            <div class="items bwset">
-                <div class="item" >
-                    <label>报文类型</label>
-                    <span id="messageType"></span>
-                </div>
-                <div class="item" >
-                    <label>报文组数 </label>
-                    <span id="zs"></span>
-                </div>
-                <div class="item" >
-                    <label>发报速度 </label>
-                    <span id="speed"></span>
-                </div>
-                <div class="item" >
-                    <label>音调频率 </label>
-                    <span id="hz"></span>
-                </div>
-                <div class="item" >
-                    <label>环境噪声 </label>
-                    <div>
-                        <span id="hjzs"></span>
-                        <span id="qd"></span>
-
-                    </div>
-                </div>
-            </div>
-            <div class="options" style="display: none;">
-                <div class="ranges" for="messageType">
-                    <input id=item1 type="radio" name="messageType" />
-                    <label for="item1">长数字</label>
-                    <input id=item2 type="radio" name="messageType" checked="checked" />
-                    <label for="item2">短数字</label>
-                    <input id=item3 type="radio" name="messageType" />
-                    <label for="item3">字母</label>
-                    <input id=item01 type="radio" name="messageType" />
-                    <label for="item01">符号</label>
-                    <input id=item4 type="radio" name="messageType" />
-                    <label for="item4">混合码</label>
-
-                </div>
-                <div class="ranges" for="zs">
-                    <input id=item5 type="range" value="100" step="10" min="10" max="400" />
-                    <label for="item5"></label>
-
-                </div>
-                <div class="ranges" for="speed">
-                    <input id=item6 type="range" value="80" step="5" min="10" max="300" />
-                    <label for="item7"></label>
-
-                </div>
-                <div class="ranges" for="hz">
-                    <input id=item7 type="range" value="1200" step="100" min="100" max="3000" />
-                    <label for="item7"></label>
-
-                </div>
-                <div class="ranges" for="hjzs">
-                    <span class="bold">类型:</span>
-                    <input id=noiseSelect type="radio" name="hjzs" checked="checked" />
-                    <label for="noiseSelect">无</label>
-                    <input id=item12 type="radio" name="hjzs" />
-                    <label for="item12">狂风</label>
-                    <input id=item13 type="radio" name="hjzs" />
-                    <label for="item13">空间</label>
-                    <input id=item14 type="radio" name="hjzs" />
-                    <label for="item14">卫星</label>
-                    <input id="bzs" type="radio" name="hjzs" />
-                    <label for="bzs">白噪声</label>
-                    <span class="qd bold">强度:</span>
-                    
-                    <div class="qd " for="qd">
-                        <input id=item21 type="radio" name="qd" />
-                        <label for="item21">1</label>
-                        <input id=item22 type="radio" name="qd" />
-                        <label for="item22">2</label>
-                        <input id=item23 type="radio" name="qd" />
-                        <label for="item23">3</label>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-        <div class="box no">
-            <div class="title">
-                <label>报文内容</label>
-                <div id="pages"></div>
-                <a id="begin">开始听写</a>
-                <span class="setshow">︿</span>
-            </div>
-            <div class="items">
-                <div id="showoption">
-
-                    <span>报文</span>
-                    <input type="checkbox" id="item52" name="yw" checked="checked" />
-                    <label for="item52"></label>
-                    <span>译文</span>
-                    <input type="checkbox" id="item51" name="bw" checked="checked" />
-                    <label for="item51"></label>
-                    <span>屏显</span>
-                    <input type="checkbox" id="screenshow" checked="checked"/>
-                    <label for="screenshow"></label>
-
-
-                </div>
-                <div id="showDiv"></div>
-            </div>
-        </div>
-
-    </div>
-    <footer>
-        <p>Copyright © 2020　设计：王炳东（dongandxiu@163.com）　顾问：刘中强</p>
-        <script>
-            if(document.location.href.indexOf('zmlmf.top')>0){
-                document.write(' <p ><a href="http://www.beian.miit.gov.cn/"> 鲁ICP备19019897号-1　鲁ICP备19019897号-2</a></p>');
-
-            }
-            
-        </script>
-       
-    </footer>
-    <div class="mask" >
-            <div id="mb" class="info" onclick="event.stopPropagation()">
-                    <div class="close" ></div>
-                    <div class="infotitle">
-                        <span>码表</span>
-                    </div>
-                    <div class="infocontent">
-                        <div>基本码表</div>
-                        
-                        <p>摩尔斯电码定义了包括：英文字母A-Z（无大小写区分）十进制数字0-9，以及“？”,“/”,“（）”,“－”,“．”很适合英语的通信。至今仍有很多地方在使用。在业余无线电通信中，他是全世界运用统一的电码。下面列出的是基本码表：
-                        </p>
-                        <div id="morsetable"></div>
-                    </div>
-                </div>
-        <div id="sm" class="info" onclick="event.stopPropagation()">
-            <div class="close" ></div>
-            <div class="infotitle">
-                <span>系统说明</span>
-            </div>
-            <div class="infocontent">
-                <div>1、说明</div>
-                <p>第一步：点击“生成报文”</p>
-                <p>第二步：点击“开始听写”</p>
-                <div>2、报文类型</div>
-                <p>长数字（数字-长码，通用）</p>
-                <p>短数字（数字-短码，纯数码报用）</p>
-                <p>字码-字母（通用）</p>
-                <p>符号（通用）</p>
-                <p>长码数字，字母，标点混合码（通用）</p>
-                
-            </div>
-        </div>
-        
-    </div>
-    <div id="canvasbox">
-        <canvas></canvas>
-    </div>
-    <script>
-         
-    </script>
+<body onload="new Dyatlov('map', toolkit, config)">
+<div id="map" style="height: 100%; z-index: 1;"></div>
+<div style="position: absolute; bottom: 0; z-index: 2; background: rgba(255, 255, 255, 0.7); font-size: xx-small; font-family: sans-serif;">
+Rendered with <a href="https://github.com/priyom/dyatlov">dyatlov map maker</a>,
+dynamic receiver data from <a href="http://kiwisdr.com/public/">KiwiSDR.com</a>
+| <a href="https://github.com/priyom/dyatlov#legend">Legend</a>
+</div>
 </body>
-
 </html>
